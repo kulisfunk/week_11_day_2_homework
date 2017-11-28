@@ -65,4 +65,13 @@ describe("park tests", function(){
       park.yearOn();
       assert.strictEqual(park.numDinosaurs(), 14);
     })
+
+    it("should remove type after 2 years", function(){
+      park.addDinosaur(dinosaur1);
+      park.addDinosaur(dinosaur2);
+      park.yearOn();
+      park.yearOn();
+      park.removeType(dinosaur1);
+      assert.strictEqual(park.numDinosaurs(), 9);
+    })
 })
