@@ -26,7 +26,8 @@ Park.prototype = {
       }
     }for (var i = 0; i < index.length; i++){
       var element = index[i];
-      this.enclosure.splice(element, 1);
+      var count = element - i;
+      this.enclosure.splice(count, 1);
     }
 
   },
